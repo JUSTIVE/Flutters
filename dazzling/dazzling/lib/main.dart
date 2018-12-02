@@ -26,11 +26,7 @@ class DazzlingStatus extends State<Dazzling> {
               setState(() {
   
               });
-              
-              
-              
             },
-            
           ),
           bottomNavigationBar: BottomAppBar(
             notchMargin: 8.0,
