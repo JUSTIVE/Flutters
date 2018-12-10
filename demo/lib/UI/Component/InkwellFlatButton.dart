@@ -15,7 +15,7 @@ class InkwellFlatButton extends StatelessWidget{
     return new FlatButton(
       child: InkWell(
         child:new Text(text,)
-      ), onPressed: onPressed(),
+      ), onPressed: onPressed,
     );
   }
 
