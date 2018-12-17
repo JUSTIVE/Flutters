@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'pages/Homme/Homme.dart';
-
+import 'package:flutter/services.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(
+        statusBarColor: Color(0xff00ff00)
+      )
+    );
     return new MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Vanguard',
