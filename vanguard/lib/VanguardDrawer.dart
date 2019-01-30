@@ -4,6 +4,7 @@ import 'pages/Homme/Homme.dart';
 import 'pages/Vinta/vinta.dart';
 import 'pages/Tara/Tara.dart';
 import 'pages/Dola/Dola.dart';
+import 'pages/Bluie/Bluie.dart';
 
 class VanguardDrawer extends StatelessWidget {
   @override
@@ -16,7 +17,8 @@ class VanguardDrawer extends StatelessWidget {
           DrawerItem(Notom()),
           DrawerItem(Vinta()),
           DrawerItem(Tara()),
-          DrawerItem(Dola())
+          DrawerItem(Dola()),
+          DrawerItem(Bluie())
         ],
       ),
     );
