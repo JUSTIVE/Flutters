@@ -21,12 +21,17 @@ class BluieState extends State<Bluie> {
       key: _scaffoldKey,
       drawer: VanguardDrawer(),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.bluetooth_searching),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(Icons.bluetooth_searching),
+            Text(devices.length.toString())
+          ],
+        ),
         onPressed: () {
           setState(() async {
             flutterBlue.scan().listen((scanResult) {
               this.devices.add(scanResult);
-              
             });
           });
         },
@@ -47,8 +52,10 @@ class BluieState extends State<Bluie> {
         ),
       ),
       body: ListView(
-        children:
-            devices.map((device) => Text(device.device.name.toString())).toList(),
+        children: devices
+            .where((device) => device.device.name != "")
+            .map((device) => Text(device.device.name.toString()))
+            .toList(),
       ),
     );
   }
